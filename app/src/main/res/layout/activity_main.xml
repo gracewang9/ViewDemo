@@ -10,11 +10,11 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:overScrollMode="never"
         android:scrollbars="horizontal"
-app:tabMode="scrollable"
         app:tabIndicatorFullWidth="false"
-        android:layout_height="wrap_content" />
+        app:tabMode="scrollable" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"

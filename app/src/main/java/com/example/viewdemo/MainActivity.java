@@ -26,8 +26,11 @@ import com.example.viewdemo.views.DrawPathLinerView;
 import com.example.viewdemo.views.DrawPathView;
 import com.example.viewdemo.views.DrawPointView;
 import com.example.viewdemo.views.DrawRectView;
+import com.example.viewdemo.views.DrawViewPractice0;
 import com.example.viewdemo.views.DrawViewPractice1;
 import com.example.viewdemo.views.DrawViewPractice2;
+import com.example.viewdemo.views.XfermodeView;
+import com.example.viewdemo.views.XfermodeView2;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
@@ -56,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setTitleData(){
         listTitle=new ArrayList<>();
+        listTitle.add("Xfermode2");
+        listTitle.add("AvatarView");
+        listTitle.add("练习0");
         listTitle.add("练习1");
         listTitle.add("练习2");
         listTitle.add("drawColor");
@@ -77,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         listFragment=new ArrayList<>();
+        listFragment.add(new Fragment_0(new XfermodeView2(this)));
+        listFragment.add(new Fragment_0(new XfermodeView(this)));
+        listFragment.add(new Fragment_0(new DrawViewPractice0(this)));
         listFragment.add(new Fragment_0(new DrawViewPractice1(this)));
         listFragment.add(new Fragment_0(new DrawViewPractice2(this)));
         listFragment.add(new Fragment_0(new DrawColorView(this)));

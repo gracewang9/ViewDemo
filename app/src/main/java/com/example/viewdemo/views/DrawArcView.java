@@ -57,6 +57,8 @@ public class DrawArcView extends View {
         paint.setStyle(Paint.Style.STROKE);
         paint.setColor(Color.WHITE);
 
+
+
         path.moveTo(180,190);
         path.lineTo(250, 190);
         path.rLineTo(20, 20);
