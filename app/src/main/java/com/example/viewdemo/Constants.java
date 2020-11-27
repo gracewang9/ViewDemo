@@ -1,12 +1,11 @@
 package com.example.viewdemo;
 
-import android.content.Context;
-import android.provider.Settings;
+import android.content.res.Resources;
 import android.util.TypedValue;
 
 public class Constants {
 
-    public static float dp2px(float value, Context context) {
-        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, value, context.getResources().getDisplayMetrics());
+    public static float dp2px(float value) {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, value, Resources.getSystem().getDisplayMetrics());
     }
 }

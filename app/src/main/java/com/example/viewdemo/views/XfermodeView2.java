@@ -20,8 +20,8 @@ import com.example.viewdemo.R;
 
 public class XfermodeView2 extends View {
     private Paint paint = new Paint();
-    private int Bitmap_WIDTH = (int) Constants.dp2px(150f, this.getContext());
-    private RectF  bounds = new RectF(Bitmap_WIDTH, Constants.dp2px(50f, this.getContext()), Constants.dp2px(300f, this.getContext()), Constants.dp2px(200f, this.getContext()));
+    private int Bitmap_WIDTH = (int) Constants.dp2px(150f);
+    private RectF bounds = new RectF(Bitmap_WIDTH, Constants.dp2px(50f), Constants.dp2px(300f), Constants.dp2px(200f));
     private Xfermode xfermode = new PorterDuffXfermode(PorterDuff.Mode.XOR);
     private Context context;
 
@@ -45,10 +45,10 @@ public class XfermodeView2 extends View {
     private void init() {
         Canvas canvas = new Canvas(circleBitmap);
         paint.setColor(Color.parseColor("#D81B60"));
-        canvas.drawOval(Constants.dp2px(50f, context), Constants.dp2px(0f, context), Constants.dp2px(150f, context), Constants.dp2px(100f, context), paint);
+        canvas.drawOval(Constants.dp2px(50f), Constants.dp2px(0f), Constants.dp2px(150f), Constants.dp2px(100f), paint);
         paint.setColor(Color.parseColor("#2196F3"));
         canvas.setBitmap(squareBitmap);
-        canvas.drawRect(Constants.dp2px(0f, context), Constants.dp2px(50f, context), Constants.dp2px(100f, context), Constants.dp2px(150f, context), paint);
+        canvas.drawRect(Constants.dp2px(0f), Constants.dp2px(50f), Constants.dp2px(100f), Constants.dp2px(150f), paint);
 
     }
 
@@ -56,9 +56,9 @@ public class XfermodeView2 extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         int count = canvas.saveLayer(bounds, null);
-        canvas.drawBitmap(circleBitmap,Constants.dp2px(150f, context),Constants.dp2px(50f, context),paint);
+        canvas.drawBitmap(circleBitmap, Constants.dp2px(150f), Constants.dp2px(50f), paint);
         paint.setXfermode(xfermode);
-        canvas.drawBitmap(squareBitmap,Constants.dp2px(150f, context),Constants.dp2px(50f, context),paint);
+        canvas.drawBitmap(squareBitmap, Constants.dp2px(150f), Constants.dp2px(50f), paint);
         paint.setXfermode(null);
         canvas.restoreToCount(count);
 

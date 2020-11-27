@@ -20,8 +20,8 @@ import com.example.viewdemo.R;
 
 public class XfermodeView extends View {
     private Paint paint;
-    private int IMAGE_WIDTH= (int) Constants.dp2px(200f,this.getContext());
-    private float IMAGE_PADDING=  Constants.dp2px(20f,this.getContext());
+    private int IMAGE_WIDTH= (int) Constants.dp2px(200f);
+    private float IMAGE_PADDING=  Constants.dp2px(20f);
     private RectF bounds;
     private Xfermode xfermode=new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
 

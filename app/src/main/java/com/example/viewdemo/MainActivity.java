@@ -26,9 +26,11 @@ import com.example.viewdemo.views.DrawPathLinerView;
 import com.example.viewdemo.views.DrawPathView;
 import com.example.viewdemo.views.DrawPointView;
 import com.example.viewdemo.views.DrawRectView;
+import com.example.viewdemo.views.DrawTextView;
 import com.example.viewdemo.views.DrawViewPractice0;
 import com.example.viewdemo.views.DrawViewPractice1;
 import com.example.viewdemo.views.DrawViewPractice2;
+import com.example.viewdemo.views.MultilineTextView;
 import com.example.viewdemo.views.XfermodeView;
 import com.example.viewdemo.views.XfermodeView2;
 import com.google.android.material.tabs.TabLayout;
@@ -59,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setTitleData(){
         listTitle=new ArrayList<>();
+        listTitle.add("绘制图文");
+        listTitle.add("DrawText");
         listTitle.add("Xfermode2");
         listTitle.add("AvatarView");
         listTitle.add("练习0");
@@ -83,6 +87,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         listFragment=new ArrayList<>();
+        listFragment.add(new Fragment_0(new MultilineTextView(this)));
+        listFragment.add(new Fragment_0(new DrawTextView(this)));
         listFragment.add(new Fragment_0(new XfermodeView2(this)));
         listFragment.add(new Fragment_0(new XfermodeView(this)));
         listFragment.add(new Fragment_0(new DrawViewPractice0(this)));
